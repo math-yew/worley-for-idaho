@@ -1220,6 +1220,8 @@ p {
   flex: 0 0 auto;
   color: #bf3a30;
   font-weight: 600;
+  -o-object-fit: fill;
+  object-fit: fill;
 }
 
 .div-block-7 {
@@ -1477,10 +1479,21 @@ p {
 }
 
 .div-block-12.center {
+  margin-top: 10px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+}
+
+.div-block-12.center.cc {
+  margin-top: 60px;
+  margin-bottom: 100px;
 }
 
 .image-2 {
@@ -1517,7 +1530,22 @@ p {
 }
 
 .paragraph-9.larger {
+  margin-right: 10px;
+  margin-bottom: 10px;
+  margin-left: 10px;
   color: #686868;
+  text-align: left;
+}
+
+.paragraph-9.larger.bold {
+  margin-bottom: 0px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.paragraph-9.larger.sub {
+  margin-top: 0px;
+  text-align: center;
 }
 
 .paragraph-10 {
@@ -1688,6 +1716,7 @@ p {
 }
 
 .div-block-16.date {
+  overflow: visible;
   width: 25%;
   height: 100%;
   max-width: none;
@@ -1704,6 +1733,25 @@ p {
   -webkit-align-items: flex-start;
   -ms-flex-align: start;
   align-items: flex-start;
+}
+
+.div-block-17 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  margin-top: 20px;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+}
+
+.donate-button {
+  width: 100px;
+  margin: 10px;
+  border-radius: 0px;
+  background-color: #1ad321;
 }
 
 @media screen and (max-width: 991px) {
@@ -1875,6 +1923,15 @@ p {
 
   .container-3 {
     margin-bottom: 60px;
+  }
+
+  .div-block-12.center.cc {
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-align-content: space-around;
+    -ms-flex-line-pack: distribute;
+    align-content: space-around;
   }
 
   .div-block-15 {
@@ -2116,6 +2173,11 @@ p {
   .paragraph-11 {
     font-size: 1.2em;
   }
+
+  .donate-button {
+    background-color: #37dd56;
+    color: #fff;
+  }
 }
 
 @media screen and (max-width: 479px) {
@@ -2279,6 +2341,11 @@ p {
     align-content: stretch;
   }
 
+  .paragraph-9.larger {
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+
   .logo {
     font-size: 1.2em;
   }
@@ -2294,6 +2361,15 @@ p {
 
   .div-block-16.date {
     width: 100%;
+  }
+
+  .div-block-17 {
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-align-content: space-around;
+    -ms-flex-line-pack: distribute;
+    align-content: space-around;
   }
 }
 
