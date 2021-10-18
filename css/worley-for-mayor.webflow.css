@@ -369,6 +369,10 @@ p {
   color: #afdfff;
 }
 
+.section-subheading.center.bottom-pad {
+  margin-bottom: 60px;
+}
+
 .section-title-group {
   margin-bottom: 60px;
 }
