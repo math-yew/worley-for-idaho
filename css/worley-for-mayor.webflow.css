@@ -1,3 +1,19 @@
+.w-embed-youtubevideo {
+  width: 100%;
+  position: relative;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+  background-image: url('https://d3e54v103j8qbb.cloudfront.net/static/youtube-placeholder.2b05e7d68d.svg');
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.w-embed-youtubevideo:empty {
+  min-height: 75px;
+  padding-bottom: 56.25%;
+}
+
 body {
   background-color: #edeff2;
   font-family: 'Open Sans', sans-serif;
@@ -180,8 +196,8 @@ p {
   min-height: 0vh;
   padding-top: 60px;
   background-color: #575757;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(hsla(0, 0%, 100%, 0.72))), url('../images/flagpole.jpg');
-  background-image: linear-gradient(180deg, #fff, hsla(0, 0%, 100%, 0.72)), url('../images/flagpole.jpg');
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(hsla(0, 0%, 100%, 0.72))), url('../images/idaho-flag.jpg');
+  background-image: linear-gradient(180deg, #fff, hsla(0, 0%, 100%, 0.72)), url('../images/idaho-flag.jpg');
   background-position: 0px 0px, 50% 100%;
   background-size: auto, cover;
   background-repeat: repeat, no-repeat;
@@ -202,8 +218,8 @@ p {
 
 .section.first {
   background-color: #fff;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(hsla(0, 0%, 80.1%, 0))), -webkit-gradient(linear, left top, left bottom, from(hsla(0, 0%, 100%, 0.72)), to(hsla(0, 0%, 100%, 0.72))), url('../images/city-hall.png');
-  background-image: linear-gradient(180deg, #fff, hsla(0, 0%, 80.1%, 0)), linear-gradient(180deg, hsla(0, 0%, 100%, 0.72), hsla(0, 0%, 100%, 0.72)), url('../images/city-hall.png');
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(hsla(0, 0%, 80.1%, 0))), -webkit-gradient(linear, left top, left bottom, from(hsla(0, 0%, 100%, 0.72)), to(hsla(0, 0%, 100%, 0.72))), url('../images/Idaho_Capitol_Building-opt.jpeg');
+  background-image: linear-gradient(180deg, #fff, hsla(0, 0%, 80.1%, 0)), linear-gradient(180deg, hsla(0, 0%, 100%, 0.72), hsla(0, 0%, 100%, 0.72)), url('../images/Idaho_Capitol_Building-opt.jpeg');
   background-position: 0px 0px, 0px 0px, 50% 100%;
   background-size: auto, auto, cover;
   background-repeat: repeat, repeat, no-repeat;
@@ -221,8 +237,22 @@ p {
 }
 
 .section.american-flag {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(hsla(0, 0%, 100%, 0.82)), to(hsla(0, 0%, 100%, 0.82))), url('../images/pexels-wallace-chuck-3587475.jpg');
-  background-image: linear-gradient(180deg, hsla(0, 0%, 100%, 0.82), hsla(0, 0%, 100%, 0.82)), url('../images/pexels-wallace-chuck-3587475.jpg');
+  background-image: -webkit-gradient(linear, left top, left bottom, from(hsla(0, 0%, 100%, 0.82)), to(hsla(0, 0%, 100%, 0.82))), url('../images/american-flag-2.jpg');
+  background-image: linear-gradient(180deg, hsla(0, 0%, 100%, 0.82), hsla(0, 0%, 100%, 0.82)), url('../images/american-flag-2.jpg');
+  background-position: 0px 0px, 50% 50%;
+  background-size: auto, cover;
+  background-repeat: repeat, no-repeat;
+  background-attachment: scroll, fixed;
+}
+
+.section.american-flag.microphone {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(null), to(null)), url('../images/pexels-wallace-chuck-3587475.jpg');
+  background-image: linear-gradient(180deg, null, null), url('../images/pexels-wallace-chuck-3587475.jpg');
+}
+
+.section.microphone {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(hsla(0, 0%, 100%, 0.82)), to(hsla(0, 0%, 100%, 0.82))), url('../images/headphones.jpg');
+  background-image: linear-gradient(180deg, hsla(0, 0%, 100%, 0.82), hsla(0, 0%, 100%, 0.82)), url('../images/headphones.jpg');
   background-position: 0px 0px, 50% 50%;
   background-size: auto, cover;
   background-repeat: repeat, no-repeat;
@@ -1308,7 +1338,7 @@ p {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-  border-top: 3px solid #bf3a30;
+  border-bottom: 3px solid #bf3a30;
   border-radius: 3px;
   background-image: none;
 }
