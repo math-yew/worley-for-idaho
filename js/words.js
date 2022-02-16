@@ -1,5 +1,42 @@
 // var words = JSON.parse(words);
 // var words = words;
+console.log(words.events.length);
+
+var el = document.getElementById("futureEvents");
+if(!!el){
+  let events = words.events;
+  console.log(events.length);
+  for (var i = 0; i < events.length; i++) {
+    let event = events[i];
+    let past = (event.past == "true") ? true : false;
+    console.log(event.past + "past: " + past);
+    // var divElement = el.firstChild;
+    if(past){
+      var divElement = document.getElementById("blankPastEvent");
+    } else{
+      var divElement = document.getElementById("blankEvent");
+    }
+    console.log(divElement);
+    var clone = divElement.cloneNode(true);
+    clone.id = "event" + i;
+    clone.classList.remove("hide1");
+    let eventArr=["title","details","place","date","time"];
+    for (var j = 0; j < eventArr.length; j++) {
+      let attribute = eventArr[j];
+      let value = clone.querySelectorAll('[event="'+attribute+'"]')[0];
+      value.innerHTML = event[attribute];
+    }
+    console.log(clone);
+    if(past){
+      document.getElementById("pastEvents").appendChild(clone);
+    } else{
+      el.appendChild(clone);
+    }
+
+  }
+
+}
+
 
 let changes = document.querySelectorAll('[change]');
 let originalWords = {};
@@ -12,7 +49,7 @@ for(var i=0; i<changes.length; i++){
   originalWords[attribute] = val;
 }
 
-// console.log("words = " + JSON.stringify(originalWords));
+console.log("words = " + JSON.stringify(originalWords));
 console.log("words");
 for(w in words){
   let element = document.querySelectorAll('[change="' + w + '"]');

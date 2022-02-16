@@ -2475,6 +2475,10 @@ p {
   }
 }
 
+.hide1 {
+  display: none;
+}
+
 @media screen and (max-width: 479px) {
   .button {
     margin-bottom: 25px;
@@ -2683,4 +2687,3 @@ p {
     padding-left: 40px;
   }
 }
-
