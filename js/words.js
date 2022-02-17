@@ -1,22 +1,14 @@
-// var words = JSON.parse(words);
-// var words = words;
-console.log(words.events.length);
-
 var el = document.getElementById("futureEvents");
 if(!!el){
   let events = words.events;
-  console.log(events.length);
   for (var i = 0; i < events.length; i++) {
     let event = events[i];
     let past = (event.past == "true") ? true : false;
-    console.log(event.past + "past: " + past);
-    // var divElement = el.firstChild;
     if(past){
       var divElement = document.getElementById("blankPastEvent");
     } else{
       var divElement = document.getElementById("blankEvent");
     }
-    console.log(divElement);
     var clone = divElement.cloneNode(true);
     clone.id = "event" + i;
     clone.classList.remove("hide1");
@@ -26,17 +18,35 @@ if(!!el){
       let value = clone.querySelectorAll('[event="'+attribute+'"]')[0];
       value.innerHTML = event[attribute];
     }
-    console.log(clone);
     if(past){
       document.getElementById("pastEvents").appendChild(clone);
     } else{
       el.appendChild(clone);
     }
-
   }
-
 }
 
+var ml = document.getElementById("mediaLinks");
+if(!!ml){
+  let media = words.media;
+  console.log(media.length);
+  for (var i = 0; i < media.length; i++) {
+    let m = media[i];
+    var divElement = document.getElementById("blankMedia");
+    console.log(divElement);
+    var clone = divElement.cloneNode(true);
+    clone.id = "media" + i;
+    clone.classList.remove("hide1");
+    let mediaArr=["title","code"];
+    for (var j = 0; j < mediaArr.length; j++) {
+      let attribute = mediaArr[j];
+      let value = clone.querySelectorAll('[media="'+attribute+'"]')[0];
+      value.innerHTML = m[attribute];
+    }
+    console.log(clone);
+    ml.appendChild(clone);
+  }
+}
 
 let changes = document.querySelectorAll('[change]');
 let originalWords = {};
