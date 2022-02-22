@@ -42,6 +42,11 @@ if(!!ml){
       let attribute = mediaArr[j];
       let value = clone.querySelectorAll('[media="'+attribute+'"]')[0];
       value.innerHTML = m[attribute];
+      if(attribute == "code"){
+        if(m[attribute].indexOf("youtube") > -1 || m[attribute].indexOf("youtu.be") > -1){
+          value.classList.add("w-embed-youtubevideo");
+        }
+      }
     }
     console.log(clone);
     ml.appendChild(clone);
