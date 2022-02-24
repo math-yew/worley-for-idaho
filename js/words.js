@@ -41,12 +41,15 @@ if(!!ml){
     for (var j = 0; j < mediaArr.length; j++) {
       let attribute = mediaArr[j];
       let value = clone.querySelectorAll('[media="'+attribute+'"]')[0];
-      value.innerHTML = m[attribute];
+      let text = m[attribute]
       if(attribute == "code"){
+        text = text.replace(/&#x27;/g,"'");
+        text = text.replace(/&#x22;/g,'"');
         if(m[attribute].indexOf("youtube") > -1 || m[attribute].indexOf("youtu.be") > -1){
           value.classList.add("w-embed-youtubevideo");
         }
       }
+      value.innerHTML = text;
     }
     console.log(clone);
     ml.appendChild(clone);
