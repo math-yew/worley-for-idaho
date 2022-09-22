@@ -205,6 +205,25 @@ p {
   background-attachment: scroll, fixed;
 }
 
+.section.election {
+  min-height: 0vh;
+  padding-top: 60px;
+  background-color: #575757;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(hsla(0, 0%, 100%, 0.72))), url('../images/vote_here.jpg');
+  background-image: linear-gradient(180deg, #fff, hsla(0, 0%, 100%, 0.72)), url('../images/vote_here.jpg');
+  background-position: 0px 0px, 50% 100%;
+  background-size: auto, cover;
+  background-repeat: repeat, no-repeat;
+  background-attachment: scroll, fixed;
+}
+
+
+.section.flag.issues {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(hsla(0, 0%, 100%, 0.72))), url('../images/vaccine.jpg');
+  background-image: linear-gradient(180deg, #fff, hsla(0, 0%, 100%, 0.72)), url('../images/vaccine.jpg');
+  background-position: top;
+}
+
 .section.platform {
   min-height: 0vh;
 }
@@ -227,6 +246,12 @@ p {
   background-attachment: scroll, scroll, fixed;
 }
 
+.section.first.issues {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(hsla(0, 0%, 80.1%, 0))), -webkit-gradient(linear, left top, left bottom, from(hsla(0, 0%, 100%, 0.72)), to(hsla(0, 0%, 100%, 0.72))), url('../images/capitol steps.jpg');
+  background-image: linear-gradient(0deg, #fff, hsla(0, 0%, 80.1%, 0)), linear-gradient(0deg, hsla(0, 0%, 100%, 0.72), hsla(0, 0%, 100%, 0.72)), url('../images/capitol steps.jpg');
+
+}
+
 .section.gray {
   background-color: hsla(0, 0%, 44.7%, 0.6);
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(110, 106, 106, 0.81)), to(#434141)), url('../images/lines.png');
@@ -235,6 +260,39 @@ p {
   background-size: auto, cover;
   background-repeat: repeat, no-repeat;
   background-attachment: scroll, fixed;
+}
+
+.section.education {
+  background-color: hsla(0, 0%, 44.7%, 0.6);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(110, 106, 106, 0.81)), to(#434141)), url('../images/wall texture.png');
+  background-image: linear-gradient(180deg, rgba(110, 106, 106, 0.81), #434141), url('../images/wall texture.png');
+  background-position: 0px 0px, 100% 0%;
+  background-size: auto, cover;
+  background-repeat: repeat, no-repeat;
+  background-attachment: scroll, fixed;
+}
+
+.section.gray.support {
+  background-color: #c01515;
+  background-image: none;
+}
+
+#support2a div{
+  color: #ffffff !important;
+}
+#support2a p{
+  color: #ffffff !important;
+}
+
+.section.money.issues {
+    background-color: hsla(0, 0%, 44.7%, 0.6);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(110, 106, 106, 0.81)), to(#434141)), url('../images/give_money.jpg');
+    background-image: linear-gradient(180deg, rgba(110, 106, 106, 71%), #434141), url('../images/give_money.jpg');
+    background-position: center;
+    background-size: auto, cover;
+    background-repeat: repeat, no-repeat;
+    background-attachment: scroll, fixed;
+    color:white;
 }
 
 .section.american-flag {
@@ -410,6 +468,10 @@ p {
 
 .section-title-group.platform {
   margin-bottom: 0px;
+}
+
+.issues-section {
+  padding: 100px 10px !important;
 }
 
 .form-field {
